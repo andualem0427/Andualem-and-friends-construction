@@ -1,0 +1,69 @@
+:root{
+    --accent: #f2b705; /* warm gold */
+    --dark: #0b2545;   /* deep blue */
+    --muted: #6b7280;  /* gray */
+    --bg: #f7f9fb;
+    --maxw: 1100px;
+    --radius: 12px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }/* ---------- GLOBAL ---------- */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:#0b1b2b}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* ---------- NAV ---------- */
+header{background:#fff;box-shadow:0 6px 18px rgba(11,37,69,0.06);position:sticky;top:0;z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{display:flex;gap:12px;align-items:center}
+.logo .mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--dark),#163a6d);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+nav ul{display:flex;gap:18px;align-items:center;list-style:none;margin:0;padding:0}
+.cta{background:var(--accent);color:var(--dark);padding:10px 14px;border-radius:10px;font-weight:600}
+
+/* ---------- HERO ---------- */
+.hero{display:grid;grid-template-columns:1fr 480px;gap:28px;align-items:center;padding:56px 0}
+.hero-left h1{font-family:Montserrat, sans-serif;font-size:38px;margin:0 0 14px;color:var(--dark)}
+.hero-left p{color:var(--muted);margin:0 0 20px}
+.hero-ctas{display:flex;gap:12px}
+.hero-card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 6px 24px rgba(11,37,69,0.06)}
+.sup{border-radius: 100px;}
+
+/* ---------- SERVICES ---------- */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0}
+.service{background:white;padding:20px;border-radius:12px}
+.service h4{margin:10px 0 6px}
+.service p{color:var(--muted);margin:0}
+
+/* ---------- PORTFOLIO ---------- */
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.proj{position:relative;border-radius:10px;overflow:hidden;background:#eee}
+.proj .meta{position:absolute;left:12px;bottom:12px;color:white;background:linear-gradient(180deg,rgba(0,0,0,0.0),rgba(0,0,0,0.45));padding:8px;border-radius:8px}
+/* ---------- TESTIMONIALS ---------- */
+.testimonials{background:linear-gradient(90deg, #fff,#f8fbff);padding:28px;border-radius:14px;margin:30px 0}
+
+/* ---------- CONTACT ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 380px;gap:18px;margin:28px 0}
+form{background:white;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(11,37,69,0.04)}
+label{display:block;font-weight:600;margin:8px 0 6px}
+input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef7}
+button[type="submit"]{margin-top:12px;background:var(--dark);color:white;padding:10px 14px;border-radius:8px;border:0;font-weight:700}
+
+/* ---------- FOOTER ---------- */
+footer{padding:20px
+   0;color:white;
+   background-color: #0b1b2b;
+   font-size:14px}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px){
+.hero{grid-template-columns:1fr;}
+.services,.portfolio{grid-template-columns:repeat(2,1fr)}
+.contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+.services,.portfolio{grid-template-columns:1fr}
+nav ul{display:none}
+}
+
+
